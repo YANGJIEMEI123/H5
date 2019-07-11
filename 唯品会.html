@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./font-weipin/iconfont.css">
+    <title>唯品会</title>
+    <style type="text/css">
+    *{
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        text-decoration: none;
+    }
+    html{
+        font-size: calc((100*100vw)/600);
+    }
+    body{
+           font-size:0.208rem;
+           width: 100%;
+           background-color: #fafaf9;
+    }
+   .tabbar{
+           display: flex;
+           justify-content: space-between;
+           height: 0.7039rem;
+           
+   }
+   .tabbar a{
+       width: 0.7039rem;
+       height:0.7039rem;
+       text-align: center;
+       line-height: 0.7039rem;
+      
+   }
+   .tabbar a>i{
+  font-size: 0.38rem;
+   }
+  
+   .search {
+       flex-grow:1;
+       /* margin: 0 auto; */
+       /* height: 100%; */
+       height: 0.48rem;
+       display: flex;
+       align-items: center;
+       margin: 0.112rem 0.016rem;
+       box-sizing: border-box;
+       border-radius: 1.6rem;
+       background: rgb(243, 244, 245);
+       
+   }
+   .search input{
+      width: 99%;
+      height: 0.48rem;
+      color: #98989f;
+      box-sizing: border-box;
+      padding: 0.096rem 0.16rem;
+      font-size: 0.224rem;
+      outline: none;
+      border: 0;
+      background: rgb(243, 244, 245);
+      border-radius: 1.6rem;
+   }
+   .nav{
+       height: 0.54rem;
+      padding-bottom: 2px;
+      
+   }
+   .nav ul{
+       display: flex;
+       justify-content: space-around;
+       align-items: center;
+       font-size: 0;
+       height: 0.54rem;
+   }
+   .nav ul>li{
+    font-size:0.208rem;
+    height: 0.54rem;
+    /* padding-top: 0.128rem; */
+    /* border-bottom: 3px solid #d34ba8; */
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+   }
+   .nav ul>li>a{
+        color: #585c64;
+   }
+   .nav ul>li.first{
+    border-bottom: 3px solid #d34ba8;
+     
+   }
+   .nav ul>li.first>a{
+    color: #d34ba8;
+   }
+   .nav ul>li.first>a:visited  .nav ul>li>a{
+    border-bottom: 3px solid #d34ba8;
+   }
+
+   .nav ul>li.first>a:visited{
+    color: #d34ba8;
+   }
+  
+   li.xiala{
+       width: 0.74rem;
+       height: 0.544rem;
+       display: flex;
+       justify-content: flex-end;
+      
+   }
+   li.xiala>a{
+    width: 0.64rem;
+    height: 0.544rem;
+   display: flex;
+   /* flex-direction: column; */
+   justify-content: center;
+   align-items:center;
+
+
+    
+   }
+   li.xiala>i{
+       font-size:24px;
+       color: #ccc;
+   }
+   .b-pic img{
+       width: 100%;
+       height: 2.88rem;
+   }
+   .m-pic {
+       width: 100%;
+       display: flex;
+   }
+   .m-pic img{
+    width:2.0rem;
+       height: 2.56rem;
+   }
+   .t-pic img{
+       width: 100%;
+       height: 1.248rem;
+   }
+   .s-pic{
+       width: 100%;
+       display: flex;
+       flex-wrap: wrap;
+   }
+   .s-pic img{
+       width: 1.20rem;
+   }
+   .dior{
+       width: 100%;
+       height: 3.944rem;
+       display: flex;
+       flex-direction: column;
+       justify-content: center;
+       align-items: center;
+      
+   }
+   .dior .pic{
+       width: 5.6rem;
+       height: 2.696rem;
+       border-top-left-radius: 5px;
+       border-top-right-radius: 5px;
+       overflow: hidden;
+       
+   }
+   .dior .pic img{
+       width: 100%;
+       height: 100%;
+   }
+   .dior .describe{
+    width: 5.6rem;
+
+       height: 1.056rem;
+       padding: 0 5%;
+       box-sizing: border-box;
+       display: flex;
+       flex-direction: column;
+       justify-content:space-around;
+      background-color: #fff;
+      border-bottom-left-radius: 5px;
+       border-bottom-right-radius: 5px;
+
+   }
+   .dior .line1{
+       display: flex;
+       justify-content: space-between;
+       align-items: center;
+   }
+   .dior .line1 .s1{
+       color: rgb(34, 34, 34);
+       font-size: 0.224rem;
+       font-weight: bold;
+   }
+   .dior .line1 .s2{
+       color:  rgb(152, 152, 159);
+       font-size: 0.192rem;
+       font-weight: bold;
+       font-weight: 400;
+   }
+   .dior .line2>span{
+       color: #d34ba8;
+   }
+   .dior .line2{
+    color: rgb(88, 92, 100);
+    font-family:  PingFangSC-Regular;
+   }
+   .footall{
+       width: 100%;
+       background:white;
+   }
+   .foot{
+       width: 100%;
+       padding: 0.32rem 0.16rem;
+       margin: 0 auto;
+       
+
+   }
+   .foot .tm{
+       width: 5.68rem;
+       height: 0.19rem;
+       font-size: 0.192rem;
+       text-align: center;
+       color: #999;
+       text-shadow: 0 0.02667rem 0 #fff;
+      line-height: 0.19rem;
+
+   }
+   .f-pic{
+       width: 100%;
+       display: flex;
+       padding-bottom: 0.576rem;
+       
+   }
+   .f-pic a{
+       width: 1.49rem;
+       height: 0.91rem;
+       padding: 0.224rem 0;
+       border-right: 1px solid #ccc;
+       display: flex;
+       flex-direction: column;
+       align-content: center;
+   }
+ .f-pic a>p{
+     width: 100%;
+     height: 0.3rem;
+     text-align: center;
+     font-size: 0.12rem;
+     color: #666;
+ }
+ .f-pic a>span{
+     text-align: center;
+     font-size: 0.59rem;
+     color: rgb(255, 92, 174);
+ }
+ .foot-ad{
+     height: 0.9918rem;
+     width: 100%;
+     /* display: flex; */
+ }
+ .foot-ad a{
+     width: 100%;
+     padding: 0.16rem 24rem;
+     box-sizing: border-box;
+ }
+
+
+
+   
+
+   
+    </style>
+</head>
+<body>
+   <div class="tabbar">
+       <a href="">登录</a>
+       <div  class="search">
+           <input type="text" placeholder="大家正在搜索：连衣裙">
+       </div>
+       <a href="" ><i  class="iconfont icon-classify"></i></a>
+   </div>
+   <div class="nav">
+       <ul>
+           <li class="first"><a href="">今日推荐</a></li>
+           <li><a href="">最后疯抢</a></li>
+           <li><a href="">美妆</a></li>
+           <li><a href="">母婴</a></li>
+           <li><a href="">国际</a></li>
+           <li><a href="">家电</a></li>
+           <li class="xiala"><a href=""><i class="iconfont icon-xiala-" style="font-size:0.28rem;"></i></a></li>
+       </ul>
+   </div>
+
+   <div class="ads">
+       <div class="b-pic">
+           <img src="https://h2.appsimg.com/a.appsimg.com/upload/flow/2019/07/10/96/15627429908934.jpg" alt="">
+       </div>
+       <div class="m-pic">
+           <img src="https://h2.appsimg.com/a.appsimg.com/upload/flow/2019/07/10/160/15627549233888.jpg" alt="">
+           <img src="https://h2.appsimg.com/a.appsimg.com/upload/flow/2019/07/10/162/15627553861279.jpg" alt="">
+           <img src="https://h2.appsimg.com/a.appsimg.com/upload/flow/2019/07/10/46/15627535642554.jpg" alt="">
+       </div>
+       <div class="t-pic">
+           <img src="https://h2.appsimg.com/a.appsimg.com/upload/flow/2019/07/10/193/15627600364361.jpg" alt="">
+       </div>
+       <div class="s-pic">
+           <a href=""><img src="https://h2.appsimg.com/a.appsimg.com/upload/flow/2019/04/22/24/15559155531733.png" alt=""></a>
+           <a href=""><img src="https://h2.appsimg.com/a.appsimg.com/upload/flow/2019/06/24/125/15613599005067.png" alt=""></a>
+           <a href=""><img src="https://h2.appsimg.com/a.appsimg.com/upload/flow/2019/04/22/118/15559156554099.png" alt=""></a>
+           <a href=""><img src="https://h2.appsimg.com/a.appsimg.com/upload/flow/2019/04/22/186/15559157209570.png" alt=""></a>
+           <a href=""><img src="https://h2.appsimg.com/a.appsimg.com/upload/flow/2019/04/22/81/15559157745029.png" alt=""></a>
+           <a href=""><img src="https://h2.appsimg.com/a.appsimg.com/upload/flow/2019/06/24/21/15613581326915.png" alt=""></a>
+           <a href=""><img src="https://h2.appsimg.com/a.appsimg.com/upload/flow/2019/04/22/108/15559158611620.png" alt=""></a>
+           <a href=""><img src="https://h2.appsimg.com/a.appsimg.com/upload/flow/2019/06/18/51/15608580716540.png" alt=""></a>
+           <a href=""><img src="https://h2.appsimg.com/a.appsimg.com/upload/flow/2019/06/18/175/15608579835271.png" alt=""></a>
+           <a href=""><img src="https://h2.appsimg.com/a.appsimg.com/upload/flow/2019/07/10/146/15627604250706.png" alt=""></a>
+       </div>
+       <div class="dior">
+           <div class="pic">
+               <img src="https://h2.appsimg.com/a.appsimg.com/upload/brand/upcb/2018/05/31/118/ias_152773321870402_1135x545_85.jpg" alt="">
+            
+            </div>
+            <div class="describe">
+                    <div class="line1">
+                        <span class="s1">迪奥Dior化妆品专场</span><span class="s2"> 剩2天</span>
+                    </div>
+                    <div class="line2">
+                        <span>9</span>折起
+                    </div>
+                </div>
+       </div>
+       
+   </div>
+   <div class="footall">
+   <div class="foot">
+       <div class="tm">早10晚8，更多特卖，敬请期待</div>
+   </div>
+   <div class="f-pic">
+        <a href=""><span class="iconfont icon-clock"></span><p>即将上线</p></a>
+        <a href=""><span class="iconfont icon-pintuanzhuanqu"></span><p>唯品团购</p></a>
+        <a href=""><span class="iconfont icon-guifandunpai"></span><p>正品保证</p></a>
+        <a href=""><span class="iconfont icon-huaban-"></span><p>唯品客服</p></a>
+    </div>
+
+    <div class="foot-ad">
+        <a href="http://" target="_blank" rel="noopener noreferrer">
+        <span> 唯品会</span>
+        <p>唯品会客户端，特卖抢不停</p>
+        <div>下载</div>
+        </a>
+    </div>
+   </div>
+<script src="./jquery-2.1.4.js"></script>
+        <script type="text/javascript"> 
+        
+        </script>
+</body>
+</html>

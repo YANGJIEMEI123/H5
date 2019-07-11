@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="H5, 嵌入式">
+    <meta name="description" content="中西部第一学府">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>轮播图</title>
+    <style type="text/css">
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            list-style: none;
+        }
+
+        div,
+        img {
+            margin: 0;
+            padding: 0;
+        }
+
+        .div_first {
+            width: 500px;
+            height: 300px;
+            margin-top: 100px;
+            margin-left: 250px;
+            overflow: hidden;
+        }
+
+        .div_second {
+            width: 4000px;
+            position: relative;
+            animation: myimg 25s linear infinite normal;
+        }
+
+        @keyframes myimg {
+
+            0%,
+            20% {
+                left: 0;
+            }
+
+            /* 这个间距是图片可停留时间 */
+            25%,
+            45% {
+                left: -500px;
+            }
+
+            /* 35%-36%是图片切换时间 */
+            50%,
+            70% {
+                left: -1000px;
+
+            }
+
+            75%,
+            95% {
+                left: -1500px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="div_first">
+        <div class="div_second">
+            <img src="./img/france-landmark-lights-night.jpg" alt="">
+            <img src="./img/pexels-photo-220762.jpeg" alt="">
+            <img src="./img/pexels-photo-248771.jpeg" alt="">
+            <img src="./img/pexels-photo-402028.jpeg" alt="">
+        </div>
+    </div>
+</body>
+
+</html>

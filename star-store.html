@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./font-star/iconfont.css">
+    <title>星巴克|门店</title>
+    <style type="text/css">
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        list-style: none;
+        outline: none;
+    }
+    body::-webkit-scrollbar{
+        display: none;
+    }
+    .all{
+        width: 100%;
+        /* height: 100%; */
+        position: relative;
+    }
+ 
+    .set-left{
+        width:30%;
+
+        min-width: 307.5px;
+        /* height:auto; */
+        float:left;
+        /* background: pink; */
+        padding:10px 0;
+       
+    }
+    .set-left::after{
+        content: '';
+        clear: both;
+    }
+    .set-right{    
+       width:70%;
+       float:right;
+       height:100vh;
+       /* position: fixed; */
+    }
+    .picture{
+        width: 70%;
+        height: 100vh;
+        position: fixed;
+        top:0;
+        right:0;
+    }
+    .set-right img{
+        width:100%;
+        height:100vh;
+    }
+    .set-right::after{
+        content: '';
+        clear: both;
+    }
+    .nav-out{
+        position: fixed;
+        top:0;
+        left:0;z-index:100;
+        width: 30%;
+    }
+    .nav{
+        width:100%;
+        display: flex;
+        justify-content: space-between;
+        padding:16px;
+        background: #fff;
+        font-weight: 700;
+        margin-bottom: 20px;
+        
+    }
+  
+   
+    .header{
+        width:200px;
+        height: 48px;
+        line-height: 48px;
+        
+        display: flex;
+        justify-content: space-between;
+    }
+    .logo img{
+        width:36px;
+        height: 48px;
+        line-height: 48px;
+    }
+    .caidan{
+        width:24px;
+      display: flex;
+      align-items: center;
+      vertical-align: middle;
+     
+    }
+    .caidan img{
+        width: 24px;
+        height: 24px;
+        
+    }
+    a{ 
+        text-decoration: none;
+        color:#212121;
+        font-size:1rem;
+    }
+    .didian{
+        height:84px;
+        display:flex;
+        flex-direction: column;
+        justify-content: space-between;
+        position:relative;
+        top:100px;
+    }
+    .thisdd span{
+        font-size: 14px;
+    }
+    .search{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .search input{
+        width:70%;
+        padding:8px 24px 8px 0;
+        font-size: 16px;
+        box-sizing: border-box;
+        border:0;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+        outline:none;
+    }
+    .search input:hover,.search input:focus{
+        border:0;
+        border-bottom: 1px solid #00A862;
+    }
+    .search a{
+        width:48px;
+        font-size:17px;
+        color: #00A862;
+    }
+    .didian,.adress{
+        width:100%;
+        padding:10px 24px;
+    }
+    .under{
+        position: relative;
+       
+    }
+    .adress{
+        display: flex;
+        flex-direction: column;
+        overflow-y: scroll;
+        position: absolute;
+        top:172px;
+
+    }
+  
+    .adress li{
+       width: 100%;
+       height:137px;
+       padding:16px 60px;
+       display: flex;
+       flex-direction: column;
+       justify-content: space-around;
+       font-size:15px;
+    }
+    .adress li>small,b,span{
+        line-height: 28px;
+    }
+    .thisdd span::before{
+font-family: "iconfont" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  content: "\e60d";
+  color:#00A862;
+  margin-right:2px;
+  font-size: 18px;
+    }
+    .thisdd span::after{
+        font-family: "iconfont" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  content: "\e7ac";
+  font-size: 14px;
+  margin-left:3px;}
+
+    .adress li::before{
+        font-family: "iconfont" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  content: "\e6cb";
+  position: absolute;
+  left:10%;
+  color:#b3b3b3;
+  font-size:40px;
+    }
+    .adress li::after{
+        font-family: "iconfont" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  content: "\e8e5";
+  color: #00A862;
+  position: absolute;
+  right:10%;
+  font-size: 32px;
+    }
+    .adress b::after{
+  font-family: "iconfont" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  content: "\e606";
+  font-size: 20px;
+  height: 20px;
+  line-height: 20px;
+  margin-left:5px;
+  color:#b9b9b9;
+    }
+    span.num{
+        width: 36px;
+        height: 36px;
+        text-align: center;
+        line-height: 36px;
+        position:absolute;
+        left:10.5%;
+        color:#fff;
+    }
+
+     #setleft2 {
+            overflow:scroll;
+        }
+        
+        #setleft2 .nav>a{
+            width: 36px;
+            height: 36px;
+        }
+        #setleft2 .nav>a>img{
+            width: 36px;
+            height: 36px;
+        }
+        ul.menuul{
+            padding-right:24px;
+            padding-left: 84px;
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            align-content: center;
+            /* align-items: flex-end; */
+        }
+        ul.menuul>li{
+            height: 37px;
+            line-height: 37px;
+            padding: 8px 0;
+            color: rgba(0, 0, 0, 0.87);
+            box-sizing: border-box;
+            font-size: 18px;
+            font-weight:700;
+            font-family: "Gotham", Helvetica, Arial, PingFangSC-Regular, "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif;
+        }
+        .reg2{
+            padding-right:24px;
+            padding-left: 84px;
+            margin:20px 0;
+           
+        }
+        .link-content{
+           margin-right: 24px;
+           margin-left:84px;
+           padding-right: 60px;
+         
+
+        }
+        .link-content a{
+              color: rgba(0, 0, 0, 0.38);
+           font-size: 14px;
+
+        }
+        .link-content img{
+            width: 10px;
+            height: 10px;
+        }
+        button.iconfont{
+            width: 40px;
+            height: 40px;
+            background: none;
+            border: 0;
+            font-size: 24px;
+        }
+        .reg {
+            height: 35px;
+            line-height: 35px;
+            display: flex;
+            justify-content: flex-start;
+            margin-top: 30px;
+        }
+        .reg button {
+            width: 65px;
+            background: none;
+            border: 1px solid #00A862;
+            padding: 5px 12px;
+            color: #00A862;
+            border-radius: 48px;
+            font-weight: 500;
+            margin-left: 20px;
+        }
+
+       .reg button>a {
+            color: #00A862;
+        }
+
+      
+
+   
+    </style>
+</head>
+<body>
+    <div class="all">
+
+    <div class="set-left" id="setleft1">
+<div class="nav-out">
+            <div class="nav">
+                    <div class="header">
+                        <a href="" class="logo"><img src="https://www.starbucks.com.cn/assets/images/logo.svg"></a>
+                        <a href="starbucks.html">门店</a>
+                        <a  href="javascript:void(0);" onclick="qiehuan()" type="button" >我的账户</a>
+                        <a href="starbucks.html" >菜单</a>
+                    </div>
+                    <div class="caidan">
+                        <a href="javascript:void(0);"  onclick="mymenu()"><img src="https://www.starbucks.com.cn/assets/icons/icon-hamburger.svg"></a>
+                    </div>
+                </div>
+</div>
+<div class="under">
+                <div class="didian">
+
+                    <!-- <div class="chazhao"></div> -->
+                    <div class="thisdd">
+                        <span>四川&nbsp;成都</span>
+                    </div>
+                    <div class="search">
+                        <input type="text" placeholder="输入地址查找门店" ><a href="">筛选</a>
+                    </div>
+
+                </div>
+
+                <div class="adress">
+                    <ul>
+                        <li>
+                            <span class="num" >1</span>
+                            <!-- <span class="iconfont .icon-dingwei1" style="color:green;font-size: 16px;"></span> -->
+                            <b >成都翡翠天地店</b>
+                            <small>成都市&nbsp;锦江区&nbsp;琉璃路656号&nbsp;华润路</small>
+                            <span>1.4km</span>
+                            <!-- <i class="iconfont .icon-gantanhaozhong "></i> -->
+
+
+                        </li>
+                        <li>
+                                <span class="num" >2</span>
+                                <b>成都翡翠天地店</b>
+                                <small>成都市&nbsp;锦江区&nbsp;琉璃路656号&nbsp;华润路</small>
+                                <span>1.4km</span>
+                        </li>
+                        <li>
+                                <span class="num" >3</span>
+                                <b>成都翡翠天地店</b>
+                                <small>成都市&nbsp;锦江区&nbsp;琉璃路656号&nbsp;华润路</small>
+                                <span>1.4km</span>
+                        </li>
+                        <li>
+                                <span class="num" >4</span>
+                                <b>成都翡翠天地店</b>
+                                <small>成都市&nbsp;锦江区&nbsp;琉璃路656号&nbsp;华润路</small>
+                                <span>1.4km</span>
+                        </li>
+                        <li>
+                                <span class="num" >5</span>
+                                <b>成都翡翠天地店</b>
+                                <small>成都市&nbsp;锦江区&nbsp;琉璃路656号&nbsp;华润路</small>
+                                <span>1.4km</span>
+                        </li>
+                        <li>
+                                <span class="num" >6</span>
+                                <b>成都翡翠天地店</b>
+                                <small>成都市&nbsp;锦江区&nbsp;琉璃路656号&nbsp;华润路</small>
+                                <span>1.4km</span>
+                        </li>
+                        <li>
+                                <span class="num" >17</span>
+                                <b>成都翡翠天地店</b>
+                                <small>成都市&nbsp;锦江区&nbsp;琉璃路656号&nbsp;华润路</small>
+                                <span>1.4km</span>
+                        </li>
+                    </ul>
+
+
+                </div>
+                </div>
+
+    </div>
+
+    <div class="set-left" id="setleft2" style="display:none;">
+            <div class="nav">
+                    <a href=""><img src="https://www.starbucks.com.cn/assets/images/logo.svg" alt=""></a>
+                    <button class="iconfont icon-chahao" onclick="releft()"></button>
+                  </div>
+
+                  <ul class="menuul">
+                      <li><a href="star-store.html">门店</a></li>
+                      <li><a href="">星享俱乐部</a></li>
+                      <li><a href="">菜单</a></li>
+                      <hr style="background: rgba(0, 0, 0, 0.12);margin-top: 15px;">
+                      <li><a href="">星巴克移动应用</a></li>
+                      <li><a href="">星礼卡</a></li>
+                      <li><a href="">星巴克甄选</a></li>
+                      <li><a href="">咖快-&nbsp;在线点&nbsp;到店取</a></li>
+                      <li><a href="">专星送</a></li>
+                      <li><a href="">咖啡星讲堂</a></li>
+                      <li><a href="">上海烘焙工坊</a></li>
+                      <li><a href="">关于星巴克</a></li>
+                      <li><a href="">帮助中心</a></li>
+                      <hr style="background: rgba(0, 0, 0, 0.12);margin-top: 15px;">
+
+                  </ul>
+                  <div class="reg reg2">
+                        <span class="iconfont icon-accountnum" style="font-size:18px;margin-right: 5px;"></span><a
+                            style="color:#00A862;">登录</a>
+                        <button><a>注册</a></button>
+                    </div>
+                    <div class="link-content">
+                        <a href="" class="eng">English&nbsp;|</a><a href="" class="private">&nbsp;隐私政策&nbsp;|</a>
+                        <a href="" class="use">
+                            使用条款&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        </a>
+                        <a href="" class="police">
+                        <img src="https://www.starbucks.com.cn/assets/images/icpicon.png" alt="">
+                        沪公网安备 31010402000318号
+                    </a>
+                    <a href="" class="icp">沪ICP备17003747号</a>
+                    </div>
+    </div>
+
+
+    <div class="set-right">
+       <div class="picture">
+            <img src="./img/chengdu.png" alt="">
+       </div>
+          
+    </div>
+</div>
+    <script type="text/javascript">
+    function qiehuan(){
+        window.open(starbucks.html);
+    }
+    function mymenu(){
+            document.getElementById('setleft1').style.display='none';
+            document.getElementById('setleft2').style.display='block';
+        }
+        function releft(){
+            document.getElementById('setleft2').style.display='none';
+            document.getElementById('setleft1').style.display='block';
+        }
+    </script>
+</body>
+</html>

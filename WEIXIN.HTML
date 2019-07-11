@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>微信对话框</title>
+    <style type="text/css">
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            background: url(./img/pexels-photo-2351425.jpeg) no-repeat center;
+             background-attachment: fixed;
+             background-size: cover;
+             /* z-index: 1; */
+        }
+        .container{
+            margin: 0px auto;
+            overflow: scroll;
+            z-index: 10;
+            /* 设置滚动条 */
+        }
+        .container::-webkit-scrollbar{
+            display: none;
+            /* 隐藏滚动条 */
+        }
+        .container .chat{
+         
+            /* min-height: 50px; */
+            width: 100%;
+            /* background-color: pink; */
+            /* margin-top: 20px; */
+            /* padding: 10px; */
+            padding-bottom: 10px;
+            box-sizing: border-box;
+            display: flex;
+            
+        }
+        .avator{
+            width: 42px;
+            height: 42px;
+            border-radius: 5px;
+            display: inline-block;
+
+        }
+        img{
+            width: 100%;
+            height: 100%;
+            border-radius: 5px;
+        }
+       .chat .content{
+            display:flex;
+            flex-direction: column;
+            /* width: 235px; */
+            margin-left: 15px;
+            max-width: 235px;
+           
+          
+        }
+        .nick{
+           font-size: 14px;
+           margin-bottom: 5px;
+        }
+       .mc, .c{ padding: 15px 10px;
+             font-size: 14px;
+             /* border: 1px solid transparent; */
+             border-radius: 5px;  background: #fdfdfd;
+             position: relative;
+        }
+        .chat .c::after{
+            content: '';
+            display: block;
+            width: 0;
+            height: 0;
+            border:10px solid transparent;
+            border-right-color: #fdfdfd;
+            position: absolute;
+            top:5px;
+            left:-18px;
+
+        }
+        .self .mc::after{
+            content: '';
+            display: block;
+            width: 0;
+            height: 0;
+            border:10px solid transparent;
+            border-left-color: #1bec1b;
+            position: absolute;
+            top:5px;
+            right:-18px;
+        }
+
+        .self{
+            display: flex;
+            justify-content: flex-end;
+        }
+        .self .content{
+            margin-right:18px;
+            /* margin-top: 8px; */
+        
+        }
+        .mc{
+            background: #1bec1b;
+        }
+        
+
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="chat">
+            <div class="avator">
+<img src="img\france-landmark-lights-night.jpg" alt="">
+            </div>
+            <div class="content">
+                <div class="nick">昵称</div>
+                <div class="c">内容加快速度何苦共idjoqisjiafaeoijn  盎司iuosfhiue是否会内容加快速度何苦共idjoqisjiafaeoijn  盎司iuosfhiue是否</div>
+            </div>
+        </div>
+
+        <div class="chat self">
+             
+                <div class="content">
+                    <!-- <div class="nick">昵称</div> -->
+                    <div class="mc">想问为什么那个人传简询给我，而你为什么却苦笑说我都懂了</div>
+                </div>
+                   <div class="avator">
+                    <img src="img\pexels-photo-1519088.jpeg" alt="">
+    
+                </div>
+            </div>
+
+
+            <div class="chat self">
+             
+                    <div class="content">
+                        <!-- <div class="nick">昵称</div> -->
+                        <div class="mc">想问为什么那个人传简询给我，而你为什么却苦笑说我都懂了，自尊常常将人拖着，把爱都走曲折</div>
+                    </div>
+                       <div class="avator">
+                        <img src="img\pexels-photo-1519088.jpeg" alt="">
+        
+                    </div>
+                </div>
+
+
+                <div class="chat">
+                        <div class="avator">
+            <img src="img\france-landmark-lights-night.jpg" alt="">
+                        </div>
+                        <div class="content">
+                            <div class="nick">昵称</div>
+                            <div class="c">内容加快速度何苦共hiue是否会内容加快内容加快速度何苦共hiue是否会内容加快速度何苦共idjoqisjiafaeoijn  盎司iuosfhiue是否</div>
+                        </div>
+                    </div>
+
+                    
+            <div class="chat self">
+             
+                    <div class="content">
+                        <!-- <div class="nick">昵称</div> -->
+                        <div class="mc">想问为什么那个人传简询给我，而你为什么却苦笑说我都懂了，自尊常常将人拖着，把爱都走曲折</div>
+                    </div>
+                       <div class="avator">
+                        <img src="img\pexels-photo-1519088.jpeg" alt="">
+        
+                    </div>
+                </div>
+
+                <div class="chat">
+                        <div class="avator">
+            <img src="img\france-landmark-lights-night.jpg" alt="">
+                        </div>
+                        <div class="content">
+                            <div class="nick">昵称</div>
+                            <div class="c">内容加快速度何苦共hiue是否会内容加快内容加快速度何苦共hiue是否会内容加快速度何苦共idjoqisjiafaeoijn  盎司iuosfhiue是否</div>
+                        </div>
+                    </div>
+
+                    
+            <div class="chat self">
+             
+                    <div class="content">
+                        <!-- <div class="nick">昵称</div> -->
+                        <div class="mc">想问为什么那个人传简询给我，而你为什么却苦笑说我都懂了，自尊常常将人拖着，把爱都走曲折</div>
+                    </div>
+                       <div class="avator">
+                        <img src="img\pexels-photo-1519088.jpeg" alt="">
+        
+                    </div>
+                </div>
+    
+    
+
+    </div>
+
+
+</body>
+
+</html>

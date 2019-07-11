@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>CSS1</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="prac.css" />
+    <!-- 外联样式一般用于通用样式 -->    
+     <!-- /*优先级：行内>内部>外联*/ -->
+    <style>
+        /* 内部样式一般用在首页，考虑访问速度 */
+        /* 选择器：标签选择器
+                  id选择器
+                  class选择器 使用.标记类选择器
+                  *通配符选择器 清除浏览器的默认样式
+                  伪类选择器，使用: :hover :pointer :visited :link
+                  子代选择器：儿子 用>表示
+
+                  后代选择器：子子孙孙 用空格表示
+                  交集选择器：所有的指定选择器都要满足
+                  并集选择器：只要和其中一个匹配，使用逗号分开所有选择器
+                  兄弟选择器
+                  属性选择器  选择器[属性]
+                  伪元素选择器 ::
+                  结构选择器 
+                  否定选择器
+
+         */
+         *{
+             margin:0;
+             padding: 0;
+         }
+
+    div{
+        background-color: blueviolet;
+        padding: 20px;
+        color: yellow;
+        width:120px;
+        height: 100px;
+        font-weight: bold;
+
+    }
+    i{
+        color: rgb(221, 103, 103);
+        font-style: normal;
+    }
+    .first{
+        font-size: 30px;
+    }
+    .weilei{
+        width: 200px;
+        height: 200px;
+        background: green;
+    }
+    .weilei:hover{
+        background: red;
+        /* 定义鼠标形状 */
+        cursor: pointer;
+
+    }
+    a:link{
+        color: pink;
+    }
+    /* 鼠标摁下，活动状态 */
+    a:active{
+        color: blueviolet;
+        font-size: 25px;
+
+    }
+    /* 访问过后 */
+    a:visited{
+        color: yellow;
+    }
+    input:focus{
+        width: 200px;
+        height: 32px;
+    background: yellow;
+    /* 清除获取焦点的外边线 */
+    outline: none;
+    /* border: 1px solid #f0f; */
+    border: 1px dashed #f0f; 
+    /* 虚线 */
+
+    }
+    div>p{
+        color:tomato;
+    }
+    .zidai:hover p{
+         background: blue;
+    }
+    .students{
+        color: #f0f;
+        font-size: 24px;
+        font-family: "楷体","微软雅黑";
+    }
+    /* 交集选择器 */
+    ul .monitor{
+        color: aqua;
+    }
+    div,p,ul{
+        font-weight: bolder;
+    }
+    .weisx::before{
+        content: '我的';
+
+    }
+    .weisx::first-letter{
+        color: red;
+        font-size: 30px;
+    }
+    .table, .table td{
+        border:1px solid #333;
+        border-collapse: collapse;
+    }
+    .table td{
+        text-align: center;
+        height: 32px;
+    }
+    .table{
+        width:80%;
+    }
+    /* 结构选择器 */
+    .table tr:first-child{
+        font-weight:bolder;
+        background-color: aquamarine;
+    }
+  
+    </style>
+    <!-- <script src="main.js"></script> -->
+</head>
+<body>
+    <!-- 行内样式使用较少 -->
+    <div class="first last">
+        落霞与孤鹜齐飞
+    </div>
+    <div>
+        <i>秋水共长天一色</i>
+    </div>
+    <div class="weilei">
+        鼠标移入
+    </div>
+    <div>
+          <a href="http://www.163.com">网易</a>
+    </div>
+  <input type="text">
+  <div class="zidai">
+      <p class="wenzi">
+          文字
+      </p>
+  </div>
+
+
+  <ul class="students">
+      <li>学生1</li>
+      <li class="monitor">学生2</li>
+      <li>学生3</li>
+      <li>学生4</li>
+      <li>学生5</li>
+  </ul>
+  <p>
+      zhelishigeduanluo
+  </p>
+  <div class="weisx">
+      毕业设计
+  </div>
+ <table class="table">
+     <tr>
+         <td>内容1</td>
+         <td>内容2</td>
+         <td>内容3</td>
+         <td>内容4</td>
+         <td>内容5</td>
+     </tr>
+     <tr>
+            <td>内容1</td>
+            <td>内容2</td>
+            <td>内容3</td>
+            <td>内容4</td>
+            <td>内容5</td>
+        </tr>
+        <tr>
+                <td>内容1</td>
+                <td>内容2</td>
+                <td>内容3</td>
+                <td>内容4</td>
+                <td>内容5</td>
+            </tr>
+ </table>
+</body>
+</html>

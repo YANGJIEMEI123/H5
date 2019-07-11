@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1.0,minimum-sacle=1.0,user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./fonts/iconfont.css">
+    <title>手机app</title>
+    <style type="text/css">
+        *{
+            margin: 0;
+            padding:0;
+        }
+        .bg{
+            background: url(https://img1.qunarzz.com/order/comp/1805/2e/6e407f088bfb902.png) no-repeat;
+           background-size: 100% 100%;
+            margin: 0 3px;
+        }
+
+        .top{
+           display: flex;
+           margin:0 2px;
+
+        }
+       
+        .didian{
+            font-size: 0.18rem;
+        }
+        .icon-sousuo{
+            position: relative;
+            left:0.4rem;
+        }
+        input.search{
+            width: 3.5rem;
+            height: 0.35rem;
+            padding: 2px 10px;
+            border: 1px solid #666;
+            border-radius:10px;
+            outline: none;
+            text-indent:1em;
+        }
+        .tuijian{
+            margin:1px 3px;
+            
+            /* width: 4rem; */
+            font-size: 0.16rem;
+            color: #fff;
+        }
+        .tuijian div{
+           text-align: center;
+        }
+        .tj1 .hotel{
+            background: #ff5555;
+           
+        }
+        .tj1,.tj2,.tj3,.tj4{
+            display: flex;
+            justify-content: center;
+            margin-bottom: 3px;
+        }
+        .tj2 .hotel{
+            background: #00a7f7;
+          
+        }
+        .tj3 .hotel{
+            background: #7cb832;
+          
+        }
+        .tj4 {
+            background: #ff9900;
+            width: 100%;
+
+          
+        }
+        .tj4>div{
+            width: 2.09rem;
+            height: 0.75rem;
+            line-height: 0.375rem;
+            border: 1px solid #ddd;
+        }
+     
+        
+
+        .hotel{
+            width:4.09rem;
+            height: 1.5rem;
+            line-height:1rem;
+            margin-right: 1px;
+            border: 1px solid #ddd;
+           
+        }
+        .more{
+            /* border: 1px solid #ddd; */
+            /* font-size: 0; */
+         
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: flex-end;
+         
+        }
+        .more>div{
+            border-right: 1px solid #ddd;
+            width:2.05rem;
+            height: 0.75rem;
+            line-height: 0.5rem;
+           
+            /* background-color: #ff5555; */
+        }
+        .mhotel>div{
+            background-color: #ff5555;
+        }
+        .mcheck>div{
+            background: #00a7f7;
+        }
+        .mvacation>div{
+            background: #7cb832;
+        }
+    
+
+
+    </style>
+</head>
+<body>
+    <div class="bg">
+    <div class="top"> 
+        <div>
+            <span class="didian">成都</span><span class="iconfont icon-xiala"></span>
+        </div>
+        <div>
+                <span class="iconfont icon-sousuo"></span><input class="search" type="text" placeholder="&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;成都热搜景点:成都欢乐谷">
+        </div>
+
+    </div>
+    </div>
+
+    <div class="tuijian">
+        <div class="tj1">
+           <div class="hotel">酒店</div>
+           <div class="more mhotel">
+               <div class="mh1">特惠酒店</div>
+               <div class="mh2">海外酒店</div>
+               <div class="mh3">民宿</div>
+               <div class="mh4">特惠</div>
+           </div>
+
+
+        </div>
+        <div class="tj2">
+
+                <div class="hotel">机票</div>
+                <div class="more mcheck">
+                    <div class="mh1">特惠酒店</div>
+                    <div class="mh2">海外酒店</div>
+                    <div class="mh3">民宿</div>
+                    <div class="mh4">特惠</div>
+                </div>
+
+            </div>
+            <div class="tj3">
+
+                    <div class="hotel">度假</div>
+                    <div class="more mvacation">
+                        <div class="mh1">特惠酒店</div>
+                        <div class="mh2">海外酒店</div>
+                        <div class="mh3">民宿</div>
+                        <div class="mh4">特惠</div>
+                    </div>
+
+                </div>
+                <div class="tj4">
+                    <div>金融·理财</div>
+                    <div>保险·车险</div>
+                    <div>换外币</div>
+
+                    </div>
+
+
+    </div>
+</body>
+<script>
+        (function (doc, win) {
+            var docEl = doc.documentElement,
+                resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+                recalc = function () {
+                    var clientWidth = docEl.clientWidth;
+                    if (!clientWidth) return;
+                    if(clientWidth>=640){
+                        docEl.style.fontSize = '100px';
+                    }else{
+                        docEl.style.fontSize = 100 * (clientWidth /640) + 'px';//此时1rem = 100px
+                        //如果页面的宽度超过了640px，那么页面中html的font-size恒为100px，
+                        //否则，页面中html的font-size的大小为： 100 * (当前页面宽度 / 640)
+                    }
+                };
+    
+            if (!doc.addEventListener) return;
+            win.addEventListener(resizeEvt, recalc, false);
+            doc.addEventListener('DOMContentLoaded', recalc, false);
+        })(document, window);
+</script>
+</html>

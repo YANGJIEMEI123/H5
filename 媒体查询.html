@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1.0,minimum-sacle=1.0,user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>media</title>
+    <style>
+    *{
+        margin: 0;
+        padding: 0;
+    }
+    @media screen and (max-width:480px) and (min-width:300px){
+        .top{
+            width:200px;
+
+            background: #ccc;
+        }
+        .left{
+            display:none;
+        }
+    }
+    @media screen and (min-width:480px) and (max-width:1300px){
+        .left{
+            width:200px;
+            height:100px;
+            background: red;
+        }
+        .top{
+            display: none;
+        }
+    }
+   
+  
+    </style>
+</head>
+<body>
+    <div class="top">
+        <ul>
+            <li>搜索</li>
+            <li>搜索</li>
+            <li>广告</li>
+        </ul>
+    </div>
+    <div class="left">
+        <ul>
+            <li>那你</li>
+            <li>零零</li>
+            <li>哦哦</li>
+        </ul>
+    </div>
+  
+</body>
+</html>

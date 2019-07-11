@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+ <html >
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>第一个</title>
+        <!-- <meta name="description" content=""> -->
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- <link rel="stylesheet" href=""> -->
+    </head>
+     <style type="text/css">
+     </style>
+    <body>
+        <h1>第一个页面</h1>
+        <a href="baidu.com" target="_blank">百度</a>
+        <u>shdgsj v</u>
+        <em>sss</em>
+        <span>sss</span>
+        <div style="display: flex;">
+        <div><img src="img\france-landmark-lights-night.jpg" alt=""></div>
+       </div>
+        <span>&lt;b&gt;标签实现加粗效果</span>
+        <form action="regsubmit"  method="POST">
+            <!-- get提交的东西会出现在地址里面 -->
+            <!-- action指定接受地址 -->
+            账号：<input type="text" name="account" value="" placeholder="请输入账号">
+            <hr>
+            密码：<input type="password" name="password">
+            <hr>
+            性别：男<input type="radio" name="sex" value="1" id="g1" title="gender">
+            <label for="g2"> 女</label>
+            <!-- 点击 女，可选中圆圈 -->
+           <input type="radio" name="sex" value="2" id="g2">
+           爱好：
+           <label for="tw">跳舞</label><input id="tw" type="checkbox" value="学习">
+           <label>跳省</label><input type="checkbox" value="学习" checked>
+           <label>编程</label><input type="checkbox" value="学习">
+           学历：
+           <select name="education" id="" >
+               <!-- <option value="0">请选择学历</option> -->
+               <option value="1">学士</option>
+               <option value="2">硕士</option>
+               <option value="3" >博士</option>
+           </select>
+           <hr>
+           个人简介：<textarea name="jianjie" id="" cols="30" rows="5" style="resize: none"></textarea>
+           上传：
+           <input type="file" name="avatar" multiple>
+           <hr>
+           <input type="submit" value="确定注册">
+           <input type="reset" value="重置">
+           <hr>
+           <br>
+           
+        </form>
+        <!-- 标签的加载和解析都是同步的，会阻塞DOM的渲染，这也就是我们经常会把<script>写在<body>底部的原因之一，为了防止加载资源而导致的长时间的白屏，另一个原因是js可能会进行DOM操作，所以要在DOM全部渲染完后再执行 -->
+        <script type="text/javascript" async defer >//defer属性的用途是表明脚本在执行时不会影响页面的构造。也就是说，脚本会被延迟到整个页面都解析完毕后再运行
+        //指定async属性的目的是不让页面等待两个脚本下载和执行，从而异步加载页面其他内容。
+        </script>
+    </body>
+</html>

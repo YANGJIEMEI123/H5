@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>CSS3</title>
+    <style type="text/css">
+        *{
+            margin: 0;
+            padding: 0;
+        }
+       
+        .mydiv{
+            /* width: 100px;height: 100px; */
+            box-shadow:inset 10px 30px 50px 20px #bbb;
+            /*盒子阴影  第一个值表示距离盒子最左边的距离
+            第二个值表示距离盒子顶部的距离 */
+            margin:20px;
+            /* 禁止换行 */
+            white-space: nowrap;
+
+            
+            /* 文字拆分 */
+            /* word-break: break-all; */
+            overflow: hidden;
+            /* 省略号 */
+            text-overflow: ellipsis;
+        }
+        .mydiv:hover{
+            width: auto;
+        }
+        .over{
+            width: 180px;
+            height: 100px;
+            margin: 0 30px;
+            background: pink;
+            text-overflow: -o-ellipsis-lastline;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            /* 超过两行省略 */
+            -webkit-box-orient: vertical;
+        }
+        /* 引入字体 */
+        @font-face{
+            font-family: 'myfont';
+            src:url(fonts/webfont);
+        }
+
+    </style>
+</head>
+<body>
+    <div class="mydiv">
+     you know my heart will  go on
+        
+    </div>
+    <div class="over">
+       忘掉种过的花重新的出发，喜帖街，那个人还会一直在那里吗
+    </div>
+    <div>
+        <div></div>
+        <div></div>
+    </div>
+    <div>
+        <div></div>
+        <div></div>
+    </div>
+    <div>
+        <div></div>
+        <div></div>
+    </div>
+    
+</body>
+</html>

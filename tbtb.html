@@ -1,0 +1,571 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./fonts/iconfont.css">
+    <title>淘宝</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .nav {
+            width: 100%;
+            margin: 7px 0;
+        }
+
+        .tab {
+            margin: 0 30% 0 6%;
+            background: #ffffff;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .sousuo {
+            display: flex;
+        }
+
+        li {
+            list-style: none;
+        }
+
+        .baobei {
+            width: 74px;
+            height: 40px;
+            border: 2px solid #ff5000;
+            border-right: none;
+            border-top-left-radius: 20px;
+            border-bottom-left-radius: 20px;
+            background: #f4f4f4;
+            line-height: 40px;
+            text-align: center;
+            font-size: 12px;
+            font: tahoma, arial, 'Hiragino Sans GB', '\5b8b\4f53', sans-serif;
+            z-index: 10;
+            box-sizing: border-box;
+        }
+
+        ul.kind {
+            display: none;
+            background: #f4f4f4;
+            z-index: 2;
+            padding-left: 5px;
+            padding-right: 5px;
+            margin-top: 0px;
+        }
+
+        li.bname:hover ul.kind {
+            display: block;
+
+        }
+
+        ul.kind>li:hover {
+            color: #ff5000;
+            position: relative;
+            left: 1px;
+            font-weight: bolder;
+            cursor: pointer;
+        }
+
+        .search {
+            width: 472px;
+            height: 36px;
+        }
+
+        .search input {
+            width: 472px;
+            height: 40px;
+            border: 2px solid #ff5000;
+            border-left: 0;
+            border-right: 0;
+            text-indent: 25px;
+            padding-right: 80px;
+            box-sizing: border-box;
+        }
+
+        .search input:focus {
+            outline: none;
+        }
+
+        #q_i,
+        #q_label {
+            position: relative;
+            top: -30px;
+            left: 10px;
+            display: inline-block;
+            font-size: 12px;
+            color: #a6a6a6;
+            font: tahoma, arial, 'Hiragino Sans GB', '\5b8b\4f53', sans-serif;
+        }
+
+        .search-btn {
+            width: 74px;
+            height: 40px;
+            border-left: none;
+            border-top-right-radius: 20px;
+            border-bottom-right-radius: 20px;
+            background: linear-gradient(to right, #ff9000 0, #ff5000 100%) repeat-x;
+            line-height: 40px;
+            text-align: center;
+            font-size: 18px;
+            color: #fff;
+            font-family: "楷体";
+            z-index: 10;
+            box-sizing: border-box;
+            position: relative;
+            cursor: pointer;
+
+        }
+
+        .wenzi {
+            font-weight: 700;
+        }
+
+        #p_i {
+            font-size: 30px;
+            color: #a6a6a6;
+            position: absolute;
+            left: -50px;
+            top: 0px;
+
+        }
+
+        .good {
+            margin: 30px 6%;
+            padding-left: 20px;
+
+        }
+
+        .bytime {
+            display: flex;
+
+        }
+
+        .djshi {
+            margin-left: 10px;
+            height: 20px;
+            line-height: 20px;
+        }
+
+        .djshi span {
+            color: #999;
+            font-weight: 400;
+            font-size: 12px;
+
+
+        }
+
+        span.mh {
+
+            color: #ff5000;
+            text-align: center;
+            font-weight: bold;
+            margin: 0 auto;
+        }
+
+        .bytime img {
+            width: 80px;
+            height: 22px;
+            margin-right: 5px;
+        }
+
+        .sj {
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            background: #ffe4dc;
+            font: 12px/1.5 tahoma, arial, 'Hiragino Sans GB', '\5b8b\4f53', sans-serif;
+            color: #ff5000;
+            text-align: center;
+            font-weight: bold;
+        }
+
+        .show-good {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+        }
+
+        .good-img {
+            width: 181.8px;
+            height: 180px;
+            margin-right: 20px;
+            overflow: hidden;
+
+        }
+
+        .coverimg {
+            width: 181.8px;
+            height: 180px;
+            background: rgba(213, 216, 198, 0.5);
+            position: relative;
+            top: -184px;
+            z-index: 20;
+        }
+
+        .coverimg:hover {
+            background: rgba(179, 180, 173, 0.5);
+        }
+
+        .g-list {
+            display: flex;
+            width: 395px;
+            cursor: pointer;
+
+        }
+
+        .describe {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+        }
+
+        .g-title {
+            font-size: 16px;
+            color: #333;
+            width: 161px;
+            height: 44px;
+            overflow: hidden;
+
+            text-overflow: ellipsis;
+
+            display: -webkit-box;
+
+            -webkit-box-orient: vertical;
+            /* 超出两行省略 */
+            -webkit-line-clamp: 2;
+        }
+
+        .g-title:hover {
+            color: #ff5000;
+
+        }
+
+        .g-ads {
+            color: #999;
+            font: 12px/1.5 tahoma, arial, 'Hiragino Sans GB', '\5b8b\4f53', sans-serif;
+        }
+
+        .g-price {
+            width: 35px;
+            height: 26px;
+            font-size: 20px;
+            color: #ff5000;
+        }
+
+        .g-price span {
+            width: 12px;
+            height: 16px;
+            font-size: 12px;
+            color: #ff5000;
+        }
+
+        del {
+            color: #999;
+            font-size: 16px;
+            margin-left: 6px;
+        }
+
+        .g-jindu {
+            position: relative;
+            top: -10px;
+            width: 160px;
+            background: #ffe4dc;
+            /* border:1px solid #ffe4dc; */
+            border-radius: 2px;
+        }
+
+        .g-jindu .jdt {
+            display: block;
+            width: 70%;
+            background: #FE3338;
+            color: #333333;
+            height: 4px;
+            border: 1px solid #FE3338;
+            border-radius: 2px;
+            /* line-height: 20px; */
+        }
+
+        .xs {
+            position: relative;
+            top: -25px;
+            width: 160px;
+            display: flex;
+            justify-content: space-between;
+            margin-top: 6px;
+            color: #FE3338;
+            font: 12px/1.5 tahoma, arial, 'Hiragino Sans GB', '\5b8b\4f53', sans-serif;
+            text-align: center;
+
+        }
+        .bname span::after{
+            content: '';
+            width: 0;
+            height: 0;
+            border: 5px solid transparent;
+            border-top-color: #999;
+            position: relative;
+            top:10px;
+            left:5px;
+        }
+        .bname span:hover{
+            cursor: pointer;
+        }
+        .top{
+            padding: 0 40px;
+            background: #f5f5f5;
+            height: 40px;
+            line-height: 40px;
+            /* min-width:1200px; */
+        }
+
+        .top>ul{
+            display: inline-block;
+            font-size: 0;
+        }
+        .top>ul>li{
+            display: inline-block;
+            font-size: 14px;
+            padding:0 10px;
+            cursor: pointer;
+            position: relative;
+            /* box-sizing: border-box; */
+        }
+        .top>ul>li:hover{
+            color:#ff5000;
+        }
+        ul.u2{
+            float: right;
+        }
+        .clear{
+            clear:both;
+        }
+        ul.sale{
+            position: absolute;
+            top:40px;
+            right: 0px;
+            border: 1px solid transparent;
+            border-top: 0;
+            display: none;
+            /* padding: 0 10px; */
+            width: 100%;
+            box-sizing: border-box;
+        }
+        li.maijia:hover{
+            background-color: #fff;
+             border: 1px solid #ff5000;
+            border-bottom:0;
+            border-top:0;
+           
+        }
+        li.maijia{
+            border: 1px solid transparent;
+              box-sizing: border-box;
+        }
+    
+        li.maijia:hover ul.sale{
+            display: block;
+            border: 1px solid #ff5000;
+            border-top: 0;
+        }
+        .sale li{
+            color: #aaa;
+            text-align: center;
+            /* background: #ddd; */
+        }
+        .sale li:hover{
+            color: #FE3338;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="top">
+        <ul class="u1">
+            <li>中国大陆</li>
+            <li>亲，请登录</li>
+            <li>免费注册</li>
+            <li>手机逛淘宝</li>
+           
+        </ul>
+        <ul class="u2">
+            <li>淘宝首页</li>
+            <li>我的淘宝</li>
+            <li>购物车</li>
+            <li>收藏夹</li>
+            <li>商品分类</li>
+            <li class="maijia">
+               卖家中心
+                <ul class="sale">
+                    <li>到此一游</li>
+                    <li>到此一游</li>
+                    <li>到此一游</li>
+                </ul>
+            </li>
+            <li>联系客服</li>
+        </ul>
+      
+
+    </div>  <div class="clear"></div>
+    <div class="nav">
+        <div class="tab">
+
+            <div class="tubiao">
+                <a href="">
+                    <img src="https://img.alicdn.com/tfs/TB1TGfMcwMPMeJjy1XbXXcwxVXa-80-33.png" alt="">
+                </a>
+            </div>
+
+            <div class="sousuo">
+
+                <div class="baobei">
+                    <ul>
+                        <li class="bname" >
+                            <span id="bb">宝贝</span>
+                            
+                            <ul  class="kind" id="kind">
+                                <li id="t1" value="天猫">天猫</li>
+                                <hr style="background-color:red;">
+                                <li id="t2" value="店铺">店铺</li>
+                            </ul>
+                            </li>
+
+                     </ul>
+                </div>
+
+                <div class="search">
+
+                    <input type="text" id="q" value="" autocomplete="off">
+                    <i class="iconfont icon-sousuo"  id="q_i"></i>
+                    <label for="q" id="q_label">网红水钻凉鞋</label>
+
+                </div>
+
+                <div class="search-btn ">
+                    <div class="wenzi"> 搜索</div>
+                    <i class="iconfont icon-paizhao" id="p_i"></i>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+    <div class="good">
+        <div class="bytime">
+            <div> <img src="https://img.alicdn.com/tfs/TB1UfJnb3oQMeJjy0FpXXcTxpXa-160-44.png" alt=""></div>
+            <div class="djshi">
+                <span>距结束</span>
+                <div class="sj">20</div><span class="mh">:</span>
+                <div class="sj">15</div><span class="mh">:</span>
+                <div class="sj">34</div>
+
+            </div>
+            <div>
+            </div>
+        </div>
+
+        <div class="show-good">
+
+            <div class="g-list">
+                <div class="good-img"><img
+                        src="https://img.alicdn.com/tps/i3/O1CN01mdUZey1UYmZmnQEpd_!!0-juitemmedia.jpg_180x180q90.jpg_.webp"
+                        alt="">
+                    <div class="coverimg"></div>
+                </div>
+                <div class="describe">
+                    <div class="g-title">儿童防晒衣夏季男女童宝宝沙滩</div>
+                    <div class="g-ads">满88元减10元</div>
+                    <div class="g-jindu">
+                        <div class="jdt"> </div>
+                    </div>
+                    <div class="xs">
+                        <span>70%</span><span>已抢322件</span>
+                    </div>
+                    <div class="g-price">
+                        <span>￥</span>9.9<del>￥68.00</del>
+                    </div>
+                </div>
+            </div>
+
+            <div class="g-list">
+                <div class="good-img"><img
+                        src="https://img.alicdn.com/tps/i4/1009706059900270163/TB262P1wodnpuFjSZPhXXbChpXa_!!0-juitemmedia.jpg_180x180q90.jpg_.webp"
+                        alt="">
+                    <div class="coverimg"></div>
+                </div>
+                <div class="describe">
+                    <div class="g-title">澳洲整切牛排套餐10份</div>
+                    <div class="g-ads">前2小时再减20元</div>
+                    <div class="g-jindu">
+                    </div>
+                    <div class="g-price">
+                        <span>￥</span>198<del>￥399.00</del>
+                    </div>
+                </div>
+            </div>
+
+            <div class="g-list">
+                <div class="good-img"><img
+                        src="https://img.alicdn.com/tps/i4/O1CN011y2CpA0jyyEEIXH_!!0-juitemmedia.jpg_180x180q90.jpg_.webp"
+                        alt="">
+                    <div class="coverimg"></div>
+                </div>
+                <div class="describe">
+                    <div class="g-title">多款可选轻小晴雨伞</div>
+                    <div class="g-ads">券后16.8</div>
+                    <div class="g-jindu"></div>
+                    <div class="g-price">
+                        <span>￥</span>19.8<del>￥68.00</del>
+                    </div>
+                </div>
+            </div>
+
+            <div></div>
+            <div></div>
+        </div>
+
+    </div>
+
+    <script src="jquery-2.1.4.js"></script>
+    <script type="text/javascript">
+
+             
+         
+
+        $(function () {
+            $('#q').on('keyup', function () {
+                var len = document.getElementById('q').value;
+                if (len != '') {
+                    $('#q_label').hide();
+                    $('#q_i').hide();
+                } else {
+                    $('#q_label').show();
+                    $('#q_i').show();
+                }
+
+            });
+
+            // $(".kind li").click(function(){
+                //   var cc=$(this).attr("id");
+                //   console.log(cc.innerHTML);
+                //    console.log(cc);
+                //   var val=cc.val();
+
+                //   console.log(val);
+            //     var ul=document.getElementById("kind").getElementsByTagName("li");
+            // for(var i=0;i<ul.length;i++){
+            //    var cc=ul[i].getAttribute("value");
+            //    console.log(cc);
+    // alert("cityid=="+cityid);
+    // }
+            // })
+        })
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<style type="text/css">
+.mydiv{
+    /* display: none; */
+    visibility: hidden;
+    /* 隐藏了也要占位置 */
+}
+.after,.after{
+    width: 150px;
+    height: 30px;
+    background: rebeccapurple;
+}
+/* 对标签进行转换 行内块级*/
+ul li{
+    display: inline-block;
+    width: 60px;
+    height: 32px;
+    background: #ccc;
+    text-align: center;
+    line-height: 32px;
+    font-size: 14px;
+    border: 5px solid #665577;
+    box-sizing: border-box;
+}
+ul li:hover{
+    background: pink;
+}
+ul{
+    font-size: 0;
+}
+.all{
+    width: 1200px;
+    height: 800px;
+    background: pink;
+    display: flex; 
+     flex-wrap: wrap;
+    /* align-items:flex-end; */
+    /* 在盒子的最底部 */
+   /* align-items: baseline;项目第一行高度基线对齐 */
+   /* align-items: stretch; */
+     /* justify-content: space-evenly; 均分*/
+     /* justify-content: space-around; */
+     /* 等间距 */
+     align-content: center;    
+   
+     
+
+     
+}
+.all>div{
+    width:200px;
+    height:200px;
+    margin:20px;
+    background: lightsalmon;
+    flex-grow: 2; 
+  
+}
+.all:nth-child(1){
+    order: 8;
+}
+.cc{
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: flex-start;
+    justify-content: space-around; 
+    align-content: stretch;
+    order: 5;
+    /* 默认值为0，数值越小，排列越靠前 */
+  
+}
+.cc>div{
+    width: 80px;
+    height: 60px;
+    background: #665599;
+    /* margin: 10px; */
+     flex-grow: 2;
+    
+}
+.cc .sk{
+    background: #335577;
+    flex-shrink: 0;
+    /* 默认值为1，为0时该项目在空间不足时不缩小 */
+}
+</style>
+<body>
+
+    <div class="all">
+        <div >aaaaaaaaaaaaaaaaa</div>
+        <div class="cc">
+            <div class="sk">asasa</div>
+            <div>asasa</div>
+            <div class="sk">asasa</div>
+            <div>asasa</div>
+        </div>
+        <div>aa</div>
+        <div>aa</div>
+        <div>aa</div>
+        <div>aa</div>
+    </div>
+</body>
+</html>

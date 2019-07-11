@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>JS应用</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- <link rel="stylesheet" type="text/css" media="screen" href="main.css" /> -->
+    <style type="text/css">
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        img {
+            width: 100px;
+            height: 100px;
+        }
+    </style>
+
+</head>
+
+<body>
+    <!-- 显示当前时间 -->
+    <button type="button" onclick="document.getElementById('time').innerHTML=Date()">显示时间</button>
+    <p id="time"></p>
+    <!-- 改变标签内容 -->
+    <button onclick="document.getElementById('old').innerHTML='我是新的内容'">点我改变内容</button>
+    <p id="old">我是原来的内容</p>
+
+    <!-- 切换图片 -->
+    <button id="changep1" onclick="document.getElementById('p1').src='./img/pexels-photo-2351425.jpeg'">我想看城堡</button>
+    <img src="./img/pexels-photo-1603650.jpeg" alt="" id="p1">
+    <button id="changep2" onclick="document.getElementById('p1').src='./img/pexels-photo-1603650.jpeg'">我想看泰姬陵</button>
+    <!-- 改变css样式 -->
+    <button onclick="document.getElementById('old').style.color='red'">改变内容颜色</button>
+    <button onclick="document.getElementById('old').style.display='none'">隐藏内容</button>
+    <button onclick="document.getElementById('old').style.display='block'">显示内容</button>
+    <p id="write"></p>
+    <p id="z"></p>
+    <p id="demo"></p>
+    <button onclick="myfunction()">点我</button>
+    <p id="d1"></p>
+    <p id="d2"></p>
+    <p id="d3"></p>
+
+
+
+    <script src="jquery-2.1.4.js"></script>
+    <script>
+        //  document.write('这是js输出的文本');
+        var a = document.getElementById('write').innerHTML = '这是js写入的元素';
+        //  window.alert('请关闭这个提示框');
+        console.log('这是写入控制台的内容'); //打印字符
+        console.log(a); //打印变量
+        var x, y, z; // 语句 1
+        x = 22; // 语句 2
+        y = 11; // 语句 3
+        z = x + y; // 语句 4
+        var person = "Bill Gates",
+            carName = "porsche",
+            price = 150000;
+
+        document.getElementById("z").innerHTML =
+            "z 的值是" + '<b>' + z + '</b>' + "。"; //可以在里面加标签
+        document.getElementById("demo").innerHTML = (7 + 8) * 10;
+        txt1 = "Hello ";
+        txt1 += "Kitty！";//字符也可以自加
+        document.getElementById("demo").innerHTML = txt1;
+
+        var cars = ["Porsche", "Volvo", "BMW"];
+        //定义数组
+        document.write(cars[1]);
+
+        var person = {//创建对象
+    firstName : "Bill",
+    lastName  : "Gates",
+    age       : 62,
+    eyeColor  : "blue"
+};
+var array=[//定义数组对象
+    {"name":"may","age":"21","adress":"SWUST"},
+    {"name":"jolin","age":"21","adress":"SWUST"}
+]
+document.write("<b>"+person.age+"</b>"+"<br>");
+document.write("<em>"+array[1].name+"</em>");
+
+        function myfunction() {
+            document.getElementById('d1').innerHTML = "我是第一个";
+            document.getElementById('d2').innerHTML = "我是第二个";
+            document.getElementById('d3').innerHTML =typeof "" + "<br>" +
+typeof "Bill" + "<br>" + 
+typeof "Bill Gates" + "<br>" +
+typeof 0 + "<br>" +
+typeof 314 + "<br>" +
+typeof 3.14 + "<br>" +
+typeof (3.14);
+
+
+
+
+        }
+    </script>
+</body>
+
+</html>

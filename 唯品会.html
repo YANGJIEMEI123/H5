@@ -21,6 +21,13 @@
            width: 100%;
            background-color: #fafaf9;
     }
+    .taball{
+        width: 100%;
+        background: #fafaf9;
+        position: fixed;
+           top: 0;
+        /* z-index: 1; */
+    }
    .tabbar{
            display: flex;
            justify-content: space-between;
@@ -32,6 +39,7 @@
        height:0.7039rem;
        text-align: center;
        line-height: 0.7039rem;
+       color: #585c64;
       
    }
    .tabbar a>i{
@@ -47,6 +55,7 @@
        align-items: center;
        margin: 0.112rem 0.016rem;
        box-sizing: border-box;
+       border: 1px solid #ddd;
        border-radius: 1.6rem;
        background: rgb(243, 244, 245);
        
@@ -60,8 +69,9 @@
       font-size: 0.224rem;
       outline: none;
       border: 0;
-      background: rgb(243, 244, 245);
+      background:#f3f4f5;
       border-radius: 1.6rem;
+      z-index: 100;
    }
    .nav{
        height: 0.54rem;
@@ -342,6 +352,7 @@ p.copyright{
     </style>
 </head>
 <body>
+    <div class="taball">
    <div class="tabbar">
        <a href="">登录</a>
        <div  class="search">
@@ -360,6 +371,7 @@ p.copyright{
            <li class="xiala"><a href=""><i class="iconfont icon-xiala-" style="font-size:0.28rem;"></i></a></li>
        </ul>
    </div>
+    </div>
 
    <div class="ads">
        <div class="b-pic">

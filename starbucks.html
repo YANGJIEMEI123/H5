@@ -262,6 +262,7 @@
             flex-direction: column;
             align-items: center;
             padding: 0 12px;
+           
 
         }
 
@@ -273,6 +274,7 @@
         ul.card img {
             width: 101px;
             height: 72px;
+            z-index: 10;
         }
 
         .rapper {
@@ -288,6 +290,7 @@
             text-align: center;
             position: relative;
             top: -40px;
+            background: #fff;
             /* box-sizing: border-box; */
         }
 
@@ -594,7 +597,53 @@
             width: 10px;
             height: 10px;
         }
-      
+        .part2 .part-left h2{
+            margin-bottom: 18px;
+            font-weight: 400;
+            font-size: 22px;
+        }
+        p.knowmore{
+            color: rgba(0, 0, 0, 0.56);
+            letter-spacing: 0.4px;
+            margin-bottom: 24px;
+        }
+        p.knowmore::after{
+            content: '了解更多 ›';
+            color: #C2A661;
+        }
+        .regbutton button{
+            padding: 6px 18px;
+            border: 1px solid #00A862;
+            color:#00A862;
+            border-radius: 48px;
+            background: transparent;
+            font-weight: 500;
+            margin-right: 6px;
+            font-size: 16px;
+        }
+        .cardall{
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+        }
+       
+        .cardall strong{
+            margin-bottom: 8px;
+            margin-top: 18px;
+        }
+        .cardall p.lmore{
+            color:  rgba(0, 0, 0, 0.56) ;
+            font-weight: 400;
+            letter-spacing: 0.4px;
+            font-size: 14px;
+            margin-bottom: 18px;
+        }
+        p.kmore{
+            color: #C2A661;
+            font-size: 12px;
+            margin-bottom: 18px;
+        }
 
 
         @media screen and (min-width:1024px) {
@@ -870,13 +919,13 @@
             <div class="infor part2">
                 <div class="part-left">
                     <h2>星享俱乐部</h2>
-                    <p class="knowmore">开启您的星享之旅，星星越多、会员等级越高、好礼越丰富。</p><a>了解更多&nbsp; ›</a>
-                    <p>
+                    <p class="knowmore">开启您的星享之旅，星星越多、会员等级越高、好礼越丰富。</p>
+                    <div class="regbutton">
                         <button>
                             登录
                         </button>
                         <button>注册</button>
-                    </p>
+                    </div>
                 </div>
                 <div class="part-right">
                     <img src="https://www.starbucks.com.cn/assets/images/logo-msr-new.svg" alt="">
@@ -893,29 +942,29 @@
                             <a class="cardall">
 
                                 <strong>会员星礼包</strong>
-                                <p>星享卡新升级<br>更多心意好礼</p>
-                                <p>了解更多&nbsp;›</p>
+                                <p class="lmore">星享卡新升级<br>更多心意好礼</p>
+                                <p class="kmore">了解更多&nbsp;›</p>
                             </a></li>
                         <li> <img src="https://www.starbucks.com.cn/assets/images/homepage/tmall-card-02.png" alt="">
                             <a class="cardall">
 
                                 <strong>星礼卡</strong>
-                                <p>用一份心礼<br>让心意相随</p>
-                                <p>了解更多&nbsp;›</p>
+                                <p class="lmore">用一份心礼<br>让心意相随</p>
+                                <p class="kmore">了解更多&nbsp;›</p>
                             </a></li>
                         <li> <img src="https://www.starbucks.com.cn/assets/images/homepage/tmall-eticket.png" alt="">
                             <a class="cardall">
 
                                 <strong>电子礼品券</strong>
-                                <p>心意<br>从这一杯开始</p>
-                                <p>了解更多&nbsp;›</p>
+                                <p class="lmore">心意<br>从这一杯开始</p>
+                                <p class="kmore">了解更多&nbsp;›</p>
                             </a></li>
                         <li><img src="https://www.starbucks.com.cn/assets/images/homepage/tmall-reserve.png" alt="">
                             <a class="cardall">
 
                                 <strong>咖啡生活</strong>
-                                <p>星巴克<br>用心制作</p>
-                                <p>了解更多&nbsp;›</p>
+                                <p class="lmore">星巴克<br>用心制作</p>
+                                <p class="kmore">了解更多&nbsp;›</p>
                             </a></li>
                     </ul>
                 </div>

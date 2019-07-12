@@ -54,7 +54,7 @@
    .search input{
       width: 99%;
       height: 0.48rem;
-      color: #98989f;
+      /* color: #98989f; */
       box-sizing: border-box;
       padding: 0.096rem 0.16rem;
       font-size: 0.224rem;
@@ -256,12 +256,85 @@
  }
  .foot-ad{
      height: 0.9918rem;
+     /* padding: 0.16rem 24rem; */
      width: 100%;
-     padding: 0.16rem 24rem;
+     padding: 0.16rem  0.24rem;
      box-sizing: border-box;
+     /* padding-right: 0.24rem; */
+     display: flex;
+     align-items: center;
+     justify-content: space-between;
+     background:#f3f4f5;
+     /* box-sizing: border-box; */
  }
+ 
+.foot-ad .ad1{
+    /* padding-right: 1.6rem; */
+    display: flex;
+   align-items: center;
+}
+.foot-ad .ad1>span{
+    width: 0.6719rem;
+    height: 0.6719rem;
+    line-height: 0.671rem;
+    background: #ea4c88;
+    color: #fff;
+    border-radius: 0.15rem;
+    text-align: center;
+    margin-right: 0.16rem;
+}
+.foot-ad .ad1>p{
+    width: 2.687rem;
+}
+.download{
+    /* width: 0.24rem; */
+    height: 0.448rem;
+    line-height: 0.448rem;
+    padding: 0 0.352rem;
+    text-align: center;
+    border: 1px solid #d34ba8;
+    color: #d34ba8;
+    font-size: 0.12rem;
+    border-radius: 5px;
+    white-space: nowrap;
 
+}
+.footabout{
+    width: 100%;
+    height: 0.38rem;
+    padding: 0.08rem 0.16rem 0 0.16rem;
+    font-size: 0.224rem;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background:#f3f4f5;
+}
+.footabout .about>a{
+    padding: 0 0.08rem;
+    color:  #585c64;
+}
+p.copyright{
+    width: 100%;
+    height: 0.62rem;
+    padding-top: 0.24rem;
 
+}
+.psb,p.copyright{
+    width: 100%;
+    color: #ccc;
+    font-size: 0.192rem;
+    text-align: center;
+    background:#f3f4f5;
+}
+.psb{
+    padding: 0.32rem 0;
+}
+.psb-sign{
+    width: 0.32rem;
+    height: 0.32rem;
+    background: url(https://www.starbucks.com.cn/assets/images/icpicon.png);
+}
 
    
 
@@ -274,7 +347,7 @@
        <div  class="search">
            <input type="text" placeholder="大家正在搜索：连衣裙">
        </div>
-       <a href="" ><i  class="iconfont icon-classify"></i></a>
+       <a href="唯品会分类.html" ><i  class="iconfont icon-classify"></i></a>
    </div>
    <div class="nav">
        <ul>
@@ -340,12 +413,32 @@
     </div>
 
     <div class="foot-ad">
-        <a href="http://" target="_blank" rel="noopener noreferrer">
+      
+        <div class="ad1">
         <span> 唯品会</span>
         <p>唯品会客户端，特卖抢不停</p>
-        <div>下载</div>
-        </a>
+        </div>
+        <div class="download">下载</div>
+      
     </div>
+
+    <div class="footabout">
+        <div class="about about1">
+            <a href="">唯品会首页</a>
+            <a href="">关于我们</a>
+        </div>
+        <div class="about about2">
+            <a href="">登录</a><a href="">注册</a>
+        </div>
+    </div>
+    <p class="copyright">Copyright © 2008-2017 m.vip.com, All Rights Reserved 粤ICP备08114786号</p>
+    <div class="psb">
+            
+                <i class="psb-sign"></i>
+                <p>粤公网安备 44010302000068号</p>
+           
+        </div>
+    
    </div>
 <script src="./jquery-2.1.4.js"></script>
         <script type="text/javascript"> 
